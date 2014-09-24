@@ -1,7 +1,7 @@
 auth0-curl
 ==========
 
-A simple [curl](http://curl.haxx.se/) wrapper that calls Auth0 (more specifically /oauth/ro), retrieves a JWT and sticks the correct
+A simple [curl](http://curl.haxx.se/) wrapper that calls Auth0 (more specifically `/oauth/ro`), retrieves a JWT and sticks the correct
 Authorization header for you. Any argument is passed to curl, see the source.
 
 # Setup
@@ -16,7 +16,7 @@ Exactly like you would use curl, no restrictions.
 # How it works
 Behind the scenes, this will do:
 
-1. a call to Auth0 /oauth/ro
+1. a call to Auth0 `/oauth/ro`
 2. get the result (a JWT) that looks like this: `{"id_token":"xxx.yyy.zzz","access_token":"aaaaaaaaaaaaaaaa","token_type":"bearer"}`
 3. extract the `id_token` from the JWT
 4. call curl with the args you supplied to `curl-auth0`, and add the `Authorization: Bearer ${id_token}` header
