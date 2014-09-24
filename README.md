@@ -5,7 +5,9 @@ A simple [curl](http://curl.haxx.se/) wrapper that calls Auth0 (more specificall
 Authorization header for you. Any argument is passed to curl, see the source.
 
 # Setup
-Edit the script and replace the 4 environment variables (`AUTH0_DOMAIN`, `AUTH0_CLIENTID`, `AUTH0_USERNAME`, `AUTH0_PASSWORD`) with your Auth0 setup.
+- Edit the script and replace the 4 environment variables (`AUTH0_DOMAIN`, `AUTH0_CLIENTID`, `AUTH0_USERNAME`, `AUTH0_PASSWORD`)
+with your Auth0 setup
+- Install [jq](http://stedolan.github.io/jq/), a very nice JSON parser
 
 # Usage
 > curl-auth0 -vvv -X GET 'http://localhost:8080/my-api'
