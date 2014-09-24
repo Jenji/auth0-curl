@@ -37,7 +37,7 @@ RO_PAYLOAD="{
 }"
 
 # call Auth0 to retrieve the JWT
-JWT=$(echo ${RO_PAYLOAD} | curl ${CURL_VERBOSE} -X POST --header 'Content-Type: application/json' --data-binary @- -k ${RO_URL})
+JWT=$(echo ${RO_PAYLOAD} | curl ${CURL_VERBOSE} -X POST --header 'Content-Type: application/json' --data-binary @- ${RO_URL})
 # Result: {"id_token":"xxx.yyy.zzz","access_token":"aaaaaaaaaaaaaaaa","token_type":"bearer"}
 
 # extract the id_token in the JWT
