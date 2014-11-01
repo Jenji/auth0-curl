@@ -25,6 +25,9 @@ AUTH0_CLIENTID=my_client_id
 AUTH0_USERNAME=my_user
 AUTH0_PASSWORD=my_passwd
 
+# AUTH0_SCOPE='openid email'
+AUTH0_SCOPE=openid
+
 RO_URL=https://${AUTH0_DOMAIN}/oauth/ro
 RO_PAYLOAD="{
    \"client_id\":   \"${AUTH0_CLIENTID}\",
@@ -32,7 +35,7 @@ RO_PAYLOAD="{
    \"password\":    \"${AUTH0_PASSWORD}\",
    \"connection\":  \"Username-Password-Authentication\",
    \"grant_type\":  \"password\",
-   \"scope\":       \"openid\",
+   \"scope\":       \"${AUTH0_SCOPE}\",
    \"device\":      \"\"
 }"
 
